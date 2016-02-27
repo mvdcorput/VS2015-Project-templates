@@ -10,7 +10,6 @@ var paths = {
 
 var angularLibsToMove = [
    paths.npmSrc + '/systemjs/dist/system.js',
-   paths.npmSrc + '/systemjs/dist/system-polyfills.js',
    paths.npmSrc + '/rxjs/bundles/Rx.js',
    paths.npmSrc + '/reflect-metadata/reflect.js',
    paths.npmSrc + '/angular2/bundles/angular2.dev.js'
