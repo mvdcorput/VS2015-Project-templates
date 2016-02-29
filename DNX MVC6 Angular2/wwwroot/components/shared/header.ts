@@ -2,11 +2,12 @@
 import {bootstrap} from 'angular2/platform/browser';
 
 @Component({
-    selector: 'header'
+    selector: 'header',
+    moduleId: module.id
 })
 @View({
-        templateUrl: 'components/shared/header.html',
-        styleUrls: ['components/shared/header.css']
+        templateUrl: 'header.html',
+        styleUrls: ['header.css']
 })
 class HeaderComponent {
     public applicationName: string;

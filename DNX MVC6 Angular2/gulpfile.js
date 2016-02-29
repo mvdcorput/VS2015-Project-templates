@@ -4,7 +4,6 @@ var gulp = require('gulp');
 
 var paths = {
     npmSrc: "node_modules/",
-    libTarget: "wwwroot/libraries/",
     libTargetAngular2: "wwwroot/libraries/angular2/"
 };
 

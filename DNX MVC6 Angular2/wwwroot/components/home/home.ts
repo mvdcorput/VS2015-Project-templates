@@ -2,11 +2,12 @@
 import {bootstrap} from 'angular2/platform/browser';
 
 @Component({
-    selector: 'home'
+    selector: 'home',
+    moduleId: module.id
 })
 @View({
-        templateUrl: 'components/home/home.html',
-        styleUrls: ['components/home/home.css']
+        templateUrl: 'home.html',
+        styleUrls: ['home.css']
 })
 class HomeComponent {
 
