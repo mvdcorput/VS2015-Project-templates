@@ -10,7 +10,7 @@ namespace DNXMVC6TypeScriptAngular2Example.MVC.Controllers
             var model = new Models.ConfigModel();
 
             model.ApplicationName = "DNX MVC6 TypeScript Angular2 example";
-            model.Version = "1.1";
+            model.Version = "1.2";
 
             return Json(model);
         }
