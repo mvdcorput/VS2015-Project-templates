@@ -1,9 +1,8 @@
 ﻿import {bootstrap} from 'angular2/platform/browser';
 import {Component, View, Inject} from 'angular2/core';
-import {ConfigModel} from './../../models/config.model';
-import {DataHandlersModel} from './../../models/data.handlers.model';
+import {ConfigModel} from './../shared/config.model';
+import {DataHandlerIdentifier} from './../../services/data/data.handlers.model';
 import {DataService} from './../../services/data/data.service';
-import {DataServiceHandlerIdentifier} from './../../services/data/data.service';
 import {HTTP_PROVIDERS} from 'angular2/http';
 
 @Component({
@@ -19,7 +18,7 @@ class HeaderComponent {
 
     private dataService: DataService;
 
-    constructor( @Inject(DataService) dataService, @Inject(DataHandlersModel) dataHandlerModel) {
+    constructor( @Inject(DataService) dataService) {
         this.dataService = dataService;
 
         this.vm = new HeaderComponentViewModel();
@@ -28,7 +27,7 @@ class HeaderComponent {
     }
 
     private getConfig(): void {
-        this.dataService.getData(DataServiceHandlerIdentifier.GetConfig, response => this.vm.config = response);
+        this.dataService.getData(DataHandlerIdentifier.GetConfig, response => this.vm.config = response);
     }
 }
 
@@ -40,4 +39,4 @@ class HeaderComponentViewModel {
     }
 }
 
-bootstrap(HeaderComponent, [HTTP_PROVIDERS, DataHandlersModel, DataService]);
+bootstrap(HeaderComponent, [HTTP_PROVIDERS, DataService]);
